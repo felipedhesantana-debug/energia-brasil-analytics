@@ -9,6 +9,8 @@ Essa é a pergunta que comercializadoras de energia, indústrias eletrointensiva
 
 ![Dashboard — página Preço](docs/img/dashboard_preco.png)
 
+🎥 [Vídeo do dashboard navegando pelas 3 páginas](docs/video/dashboard_energia_demo.mp4)
+
 ---
 
 ## Principais resultados
