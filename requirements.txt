@@ -1,0 +1,9 @@
+pandas>=2.0
+duckdb>=1.1
+dbt-core>=1.8,<1.11
+dbt-duckdb>=1.8,<1.10
+jupyter
+nbconvert
+ipykernel
+openpyxl
+certifi

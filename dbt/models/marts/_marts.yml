@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fct_energia_horaria
+    description: "Fato horário por subsistema: geração por fonte, carga, intercâmbio e CMO."
+    columns:
+      - name: subsistema_id
+        tests:
+          - relationships: {to: ref('dim_subsistema'), field: subsistema_id}
+      - name: ger_total
+        tests: [not_null]
+  - name: fct_hidrologia_diaria
+    columns:
+      - name: ear_pct
+        tests: [not_null]
+  - name: dim_subsistema
+    columns:
+      - name: subsistema_id
+        tests: [unique, not_null]
+  - name: dim_calendario
+    columns:
+      - name: data
+        tests: [unique, not_null]
+  - name: mart_energia_dashboard
+    description: "Base do Tableau (subsistema x hora, 2020 em diante)."
+    columns:
+      - name: data_hora
+        tests: [not_null]
+      - name: subsistema
+        tests: [not_null]
+  - name: mart_resumo_anual
+    columns:
+      - name: ano
+        tests: [unique, not_null]
+  - name: mart_matriz_perfil
+    description: "Geração do Brasil por fonte, no grão ano x mês x hora (formato longo)."
+    columns:
+      - name: fonte
+        tests:
+          - accepted_values: {values: ['1. Hidráulica', '2. Solar', '3. Térmica', '4. Eólica']}

@@ -1,0 +1,7 @@
+energia:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/energia.duckdb
+      threads: 4

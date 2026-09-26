@@ -1,0 +1,7 @@
+version: 2
+seeds:
+  - name: subsistemas
+    description: "Os 4 subsistemas (submercados) do Sistema Interligado Nacional."
+    columns:
+      - name: subsistema_id
+        tests: [unique, not_null]

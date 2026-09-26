@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: silver
+    description: "Dados do ONS limpos pelo notebook 01_ingestao_limpeza (Colab)."
+    schema: silver
+    tables:
+      - name: balanco_horario
+        description: "Geração por fonte, carga e intercâmbio por subsistema, hora a hora (MWmed)."
+      - name: cmo_semihorario
+        description: "Custo Marginal de Operação por subsistema a cada 30 minutos (R$/MWh)."
+      - name: ear_diario
+        description: "Energia armazenada nos reservatórios por subsistema (% da capacidade)."
+      - name: ena_diario
+        description: "Energia natural afluente por subsistema (% da média de longo termo)."

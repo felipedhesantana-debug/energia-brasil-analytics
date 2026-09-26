@@ -1,0 +1,14 @@
+.venv/
+data/raw/
+data/*.duckdb
+data/*.duckdb.wal
+dbt/target/
+dbt/logs/
+logs/
+tableau/dados/*.csv
+.DS_Store
+tableau/dados/*.xlsx
+tableau/.~*
+*.twbr
+docs/post_linkedin.md
+__pycache__/

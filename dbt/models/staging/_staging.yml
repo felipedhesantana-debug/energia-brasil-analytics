@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_balanco_horario
+    description: "Balanço energético horário por subsistema (sem a linha SIN, para não duplicar)."
+    columns:
+      - name: subsistema_id
+        tests:
+          - not_null
+          - relationships: {to: ref('subsistemas'), field: subsistema_id}
+      - name: data_hora
+        tests: [not_null]
+      - name: carga
+        tests: [not_null]
+
+  - name: stg_cmo_semihorario
+    columns:
+      - name: subsistema_id
+        tests:
+          - accepted_values: {values: ['SE', 'S', 'NE', 'N']}
+      - name: data_hora
+        tests: [not_null]
+
+  - name: stg_ear_diario
+    columns:
+      - name: subsistema_id
+        tests:
+          - accepted_values: {values: ['SE', 'S', 'NE', 'N']}
+      - name: ear_pct
+        tests: [not_null]
+
+  - name: stg_ena_diario
+    columns:
+      - name: subsistema_id
+        tests:
+          - accepted_values: {values: ['SE', 'S', 'NE', 'N']}
