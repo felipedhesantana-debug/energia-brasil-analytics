@@ -5,6 +5,8 @@ Pergunta de negócio: **quanto a chuva, os reservatórios e o crescimento da ene
 
 Essa é a pergunta que comercializadoras de energia, indústrias eletrointensivas e consultorias do setor fazem todo mês para decidir quando comprar energia, quando travar contratos e quando se proteger de picos de preço.
 
+📊 **Dashboard interativo no Tableau Public:** [abrir o dashboard](https://public.tableau.com/app/profile/felipe.gabriel.coelho.de.santana/viz/energia_dashboard/Preo)
+
 ![Dashboard — página Preço](docs/img/dashboard_preco.png)
 
 ---
@@ -150,7 +152,7 @@ Também dá para rodar uma etapa só: `python3 pipeline.py dbt` (etapas: `setup`
 
 ### Tableau
 
-Abra `tableau/energia_dashboard.twbx` no Tableau Public ou Desktop.
+Abra `tableau/energia_dashboard.twbx` no Tableau Public ou Desktop, ou veja online: https://public.tableau.com/app/profile/felipe.gabriel.coelho.de.santana/viz/energia_dashboard/Preo
 
 ---
 
